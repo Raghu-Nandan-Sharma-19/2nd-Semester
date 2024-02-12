@@ -4,6 +4,6 @@ int main() {
     char ch;
     printf("Enter any letter : ");
     scanf("%c", &ch);
-    printf("%c", ch | 32);
+    printf("Character in lower case is : %c", ch | 32);
     return 0;
 }
