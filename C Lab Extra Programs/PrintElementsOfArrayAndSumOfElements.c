@@ -1,3 +1,4 @@
+// Print Elements Of Array And Sum Of Element
 #include<stdio.h>
 int main(){
     int n, arr[100], sum=0;
