@@ -5,12 +5,8 @@ int main() {
     int length=0;
     printf("Enter anything : ");
     gets(str);
-    for(int i=0; ; i++) {
-        if(str[i] == '\0') {
-            break;
-        }else{
-            length++;
-        }
+    for(int i=0; str[i] != '\0'; i++) {
+        length++;
     }
     printf("Length of string is %d", length);
     return 0;
