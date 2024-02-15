@@ -6,8 +6,10 @@ void maximumOfThreeNumbers(int num1, int num2, int num3) {
             printf("%d is greatest.", num1);
         } else if(num2>num1 && num2>num3) {
             printf("%d is greatest.", num2);
-        } else {
+        } else if (num3>num1 && num3>num2) {
             printf("%d is greatest.", num3);
+        } else {
+            printf("All numbers are equal.");
         }
     }
 }
