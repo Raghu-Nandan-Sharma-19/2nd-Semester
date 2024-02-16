@@ -1,4 +1,4 @@
-// Program to make calculator using function and switch case
+// Program to make calculator using function and switch case.
 #include<stdio.h>
 int addition(int num1, int num2) {
     return num1 + num2;
