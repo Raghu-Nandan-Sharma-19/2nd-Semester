@@ -9,8 +9,8 @@ int subtraction(int num1, int num2) {
 int multiplication(int num1, int num2) {
     return num1 * num2;
 }
-int division(float num1, float num2) {
-    return (float)num1 / (float)num2;
+int division(int num1, int num2) {  
+    return num1 / num2;    // --> returning floor value --> 5/2 = 2
 }
 int main() {
     int num1, num2;
@@ -31,7 +31,7 @@ int main() {
         printf("Product is %d", multiplication(num1, num2));
         break;
         case 4 :
-        printf("Quotient is %d", division((float)num1, (float)num2));
+        printf("Quotient is %d", division(num1, num2));
         break;
         default:
         printf("Please enter a valid operation.");
