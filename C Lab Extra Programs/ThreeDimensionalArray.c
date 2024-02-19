@@ -1,21 +1,23 @@
 // Program to demonstrate three dimensional array
 #include<stdio.h>
 int main() {
-    int arr[2][3][4] = {
-        {
-            {1, 2, 3, 4},
-            {5, 6, 7, 8},
-            {9, 10, 11, 12}
-        },
-        {
-            {13, 14, 15, 16},
-            {17, 18, 19, 20},
-            {21, 22, 23, 24}
+    int i, j, k, size, rows, columns, arr[100][100][100];
+    printf("Enter number of matrix : ");
+    scanf("%d", &size);
+    printf("Enter number of rows : ");
+    scanf("%d", &rows);
+    printf("Enter number of columns : ");
+    scanf("%d", &columns);
+    for(i=0; i<size; i++) {
+        for(j=0; j<rows; j++) {
+            for(k=0; k<columns; k++) {
+                scanf("%d ", &arr[i][j][k]);
+            }
         }
-    };
-    for(int i=0; i<2; i++) {
-        for(int j=0; j<3; j++) {
-            for(int k=0; k<4; k++) {
+    }
+    for(i=0; i<size; i++) {
+        for(j=0; j<rows; j++) {
+            for(k=0; k<columns; k++) {
                 printf("%d ", arr[i][j][k]);
             }
             printf("\n");
