@@ -22,5 +22,5 @@ int main() {
     if(linearSearch(arr, n, key)) {
         printf("Found\n");
     }
-    return 0;
+    return 0; 
 }
