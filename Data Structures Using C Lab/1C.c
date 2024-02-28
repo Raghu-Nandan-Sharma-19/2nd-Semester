@@ -13,7 +13,7 @@ int main() {
     int n, arr[1000], key;
     printf("Enter size of the array : ");
     scanf("%d", &n);
-    printf("Enter %d elements : ", n);
+    printf("Enter %d elements :\n", n);
     for(int i=0; i<n; i++) {
         scanf("%d", &arr[i]);
     }
