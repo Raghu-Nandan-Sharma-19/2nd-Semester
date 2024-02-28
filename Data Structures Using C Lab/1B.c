@@ -12,7 +12,7 @@ void deletion(int arr[], int n, int index) {
     }
 }
 int main() {
-    int arr[1000], n, element, index, capacity=1000;
+    int arr[1000], n, element, index;
     printf("Enter the size of array :\n");
     scanf("%d", &n);
     printf("Enter %d elements :\n", n);
