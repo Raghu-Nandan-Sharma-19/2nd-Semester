@@ -1,8 +1,8 @@
 #include<stdio.h>
-int findSmallestElement(int arr[], int size) {
+void findSmallestElement(int arr[], int size) {
     int smallestElement=arr[0];
     for(int i=0; i<size; i++) {
-        if(arr[i]<smallestElement) {
+        if(arr[i]<arr[smallestElement]) {
             smallestElement=i;
         }
     }
@@ -22,5 +22,6 @@ int main() {
     }
     printf("\n");
     findSmallestElement(arr, size);
+    printf("\n");
     return 0;
 }
