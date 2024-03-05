@@ -1,29 +1,33 @@
 #include<stdio.h>
 void mergeArrays(int arr1[], int arr2[], int n1, int n2) {
-    int arr3[1000];
-    for(int i=0; i<n1; i++) {
-        arr3[i]=arr1[i];
-    }
-    for(int i=0; i<n2; i++) {
-        arr3[n1+i]=arr2[i];
-    }
-    printf("Merged array is : \n");
-    for(int i=0; i<n1+n2; i++) {
-        printf("%d ", arr3[i]);
-    }
-    printf("\n");
-    printf("Array in descending oder is : \n");
-    for(int i=0; i<n1+n2; i++) {
-        for(int j=i+1; j<n1+n2; j++) {
-            if(arr3[i]<arr3[j]) {
-                int temp=arr3[i];
-                arr3[i]=arr3[j];
-                arr3[j]=temp;
+    if(n1==n2) {
+        int arr3[1000];
+        for(int i=0; i<n1; i++) {
+            arr3[i]=arr1[i];
+        }
+        for(int i=0; i<n2; i++) {
+            arr3[n1+i]=arr2[i];
+        }
+        printf("Merged array is : \n");
+        for(int i=0; i<n1+n2; i++) {
+            printf("%d ", arr3[i]);
+        }
+        printf("\n");
+        printf("Array in descending oder is : \n");
+        for(int i=0; i<n1+n2; i++) {
+            for(int j=i+1; j<n1+n2; j++) {
+                if(arr3[i]<arr3[j]) {
+                    int temp=arr3[i];
+                    arr3[i]=arr3[j];
+                    arr3[j]=temp;
+                }
             }
         }
-    }
-    for(int i=0; i<n1+n2; i++) {
-        printf("%d ", arr3[i]);
+        for(int i=0; i<n1+n2; i++) {
+            printf("%d ", arr3[i]);
+        }
+    } else {
+        printf("Both arrays are not of same size. cannot merge");
     }
 }
 int main() {
