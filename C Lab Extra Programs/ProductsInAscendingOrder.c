@@ -8,12 +8,22 @@ void displayPrices(int a[], int n) {
     }
 }
 void superMarket(int a[], int n) {
-    for(int i=n-1; i>=1; i--) {
-        for(int j=0; j<=i-1; j++) {
-            if(a[j]>a[j+1]) {
-                int temp=a[j];
-                a[j]=a[j+1];
-                a[j+1]=temp;
+    // for(int i=n-1; i>=1; i--) {
+    //     for(int j=0; j<=i-1; j++) {
+    //         if(a[j]>a[j+1]) {
+    //             int temp=a[j];
+    //             a[j]=a[j+1];
+    //             a[j+1]=temp;
+    //         }
+    //     }
+    // }
+    int c, d, t, i;
+    for(c=0; c<n-1; c++) {
+        for(d=0; d<n-c-1; d++) {
+            if(a[d]>a[d+1]) {
+                t=a[d];
+                a[d]=a[d+1];
+                a[d+1]=t;
             }
         }
     }
