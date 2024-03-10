@@ -1,15 +1,12 @@
 // input array of n elements double size of array and make all elements zero except last element
 // 0 0 0 0 0 0 0 0 0 5
 #include<stdio.h>
-void disply(int a[], int n) {
-    for(int i=0; i<n; i++) {
-        printf("%d ", a[i]);
+void disply(int a[], int n) { // display function
+    for(int i=0; i<n; i++) { // loop to display the array
+        printf("%d ", a[i]); 
     }
 }
 void doubleSize(int a[], int n) {
-    for(int i=0; i<n; i++) {
-        scanf("%d", &a[i]);
-    }
     for(int i=n; i<2*n; i++) {
         a[i]=0;
     }
@@ -23,6 +20,9 @@ int main() {
     printf("Enter the number of elements :\n");
     scanf("%d", &n);
     printf("Enter %d elements :\n", n);
+    for(int i=0; i<n; i++) {
+        scanf("%d", &arr[i]); 
+    }
     doubleSize(arr, n);
     printf("Array after doubling the size and making all elements zero except last element is :\n");
     disply(arr, 2*n);
