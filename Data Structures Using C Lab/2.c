@@ -32,31 +32,33 @@ void pop() {
             top--;
             printf("The popped element is : %d\n", value);
         }
+        
     }
     printf("The stack is : \n");
     for(int i=top; i>=0; i--) {
         printf("%d\n", stack[i]);
     }
-    printf("Do you want to pop more elements(Enter 1 for yes and 0 for no) : ");
-    scanf("%d", &choice);
-    switch(choice) {
-        case 1:
-            pop();
-            break;
-        case 0:
-            break;
-        default:
-            printf("Invalid choice");
-    }
 }
 int main() {
     printf("Enter the size of the stack :\n");
     scanf("%d", &max);
-    push();
-    printf("Do you want to pop elements(Enter 1 for yes and 0 for no) : \n");
-    scanf("%d", &choice);
-    if(choice==1) {
-        pop();
+    while(1) {
+        printf("1. Push\n2. Pop\n3. Exit\n");
+        printf("Enter your choice : ");
+        scanf("%d", &choice);
+        switch(choice) {
+            case 1:
+                push();
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                printf("Exiting");
+                return 0;
+            default:
+                printf("\nInvalid choice");
+        }
     }
     return 0;
 }
