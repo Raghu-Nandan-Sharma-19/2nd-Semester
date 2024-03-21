@@ -1,6 +1,13 @@
 #include<stdio.h>
 #define max 10
 int stack[max],topB=max, noOfStacks, top=-1, choice;
+void display() {
+    printf("The whole stack is : \n");
+    for(int i=0; i<max; i++) {
+        printf("%d\n",stack[i]);
+    } 
+    printf("\n");
+}
 void push() {
     int value;
     if(top==max/noOfStacks-1) {
@@ -80,8 +87,8 @@ int main() {
     printf("Enter the number of stacks :\n");
     scanf("%d", &noOfStacks);
     while(1) {
-        printf("1. Push\n2. Pop from stack A\n3. Push in stack B\n4. Pop from stack b\n5. Exit\n");
-        printf("Enter your choice : \n");
+        printf("1. Push in stack A\n2. Pop from stack A\n3. Push in stack B\n4. Pop from stack b\n5. Display both stacks\n6. Exit");
+        printf("\nEnter your choice : \n");
         scanf("%d", &choice);
         switch(choice) {
             case 1:
@@ -97,11 +104,15 @@ int main() {
                 popB();
                 break;
             case 5:
-                printf("Exiting\n");
+                display();
+                break;
+            case 6:
+                printf("\nExiting\n");
                 return 0;
             default:
-                printf("\nInvalid choice");
+                printf("\nInvalid choice\n");
         }
     }
+    
     return 0;
 }
