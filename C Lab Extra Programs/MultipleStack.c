@@ -2,11 +2,19 @@
 #define max 10
 int stack[max],topB=max, noOfStacks, top=-1, choice;
 void display() {
-    printf("The whole stack is : \n");
-    for(int i=0; i<max; i++) {
-        printf("%d\n",stack[i]);
-    } 
-    printf("\n");
+    if(top==-1) {
+        printf("Stack A is empty\n");
+    } else if(topB==max) {
+        printf("Stack B is empty\n");
+    } else {
+        for(int i=0; i<max; i++) {
+            if(i<=top) {
+                printf("%d\t", stack[top-i]);
+            } else if(i>=topB) {
+                printf("%d\t", stack[i]);
+            }
+        }
+    }
 }
 void push() {
     int value;
