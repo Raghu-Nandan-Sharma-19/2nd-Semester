@@ -25,7 +25,7 @@ void pop() {
         printf("Underflow\n");
     } else {
         int popElements;
-        printf("Enter the number of elements you want to pop\n");
+        printf("Enter the number of elements you want to pop : \n");
         scanf("%d", &popElements);
         for(int i=0; i<popElements; i++) {
             value=stack[top];
@@ -44,7 +44,7 @@ int main() {
     scanf("%d", &max);
     while(1) {
         printf("1. Push\n2. Pop\n3. Exit\n");
-        printf("Enter your choice : ");
+        printf("Enter your choice : \n");
         scanf("%d", &choice);
         switch(choice) {
             case 1:
