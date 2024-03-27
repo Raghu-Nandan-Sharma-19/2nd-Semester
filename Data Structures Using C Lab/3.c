@@ -23,16 +23,13 @@ void checkParenthesis() {
     for(int i=0; i<max; i++) {
         if(str[i]=='(' || str[i]=='{' || str[i]=='[') {
             push(str[i]);
-        }
-        else if(str[i]==')' || str[i]=='}' || str[i]==']') {
+        } else if(str[i]==')' || str[i]=='}' || str[i]==']') {
             if(top==-1) {
                 printf("Unbalanced Parenthesis\n");
                 return;
-            }
-            else if((str[i]==')' && stack[top]=='(') || (str[i]=='}' && stack[top]=='{') || (str[i]==']' && stack[top]=='[')) {
+            } else if((str[i]==')' && stack[top]=='(') || (str[i]=='}' && stack[top]=='{') || (str[i]==']' && stack[top]=='[')) {
                 pop();
-            }
-            else {
+            } else {
                 printf("Unbalanced Parenthesis\n");
                 return;
             }
@@ -40,13 +37,12 @@ void checkParenthesis() {
     }
     if(top==-1) {
         printf("Balanced Parenthesis\n");
-    }
-    else {
+    } else {
         printf("Unbalanced Parenthesis\n");
     }
 }
 int main() {
-    printf("Enter the expression: ");
+    printf("Enter the expression : ");
     gets(str);
     checkParenthesis();
     return 0;
